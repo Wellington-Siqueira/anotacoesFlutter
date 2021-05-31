@@ -1,3 +1,2 @@
-const backgroudcolor = 0xff161729;
-const corBorda = 0xff9EA39E;
-const corRelogio = 0xff161750;
+const backgroudcolor = 0xff191970;
+const corDetalhe = 0xff9EA39E;

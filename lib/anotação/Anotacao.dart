@@ -99,9 +99,10 @@ class _TarefasSalvasState extends State<TarefasSalvas> {
                   decoration: InputDecoration(
                       labelText: "Descrição",
                       hintText: "Digite a anotação...",
-                      hintStyle: TextStyle(color: Color(corBorda)),
+                      hintStyle: TextStyle(color: Color(corDetalhe)),
                       labelStyle: TextStyle(
-                          color: Color(corBorda), fontWeight: FontWeight.w600)),
+                          color: Color(corDetalhe),
+                          fontWeight: FontWeight.w600)),
                 )
               ],
             ),
@@ -153,7 +154,7 @@ class _TarefasSalvasState extends State<TarefasSalvas> {
             child: Text(
               "ANOTAÇÕES",
               style: TextStyle(
-                  color: Color(corBorda),
+                  color: Color(corDetalhe),
                   fontSize: 20,
                   fontWeight: FontWeight.w900),
             ),
@@ -222,7 +223,7 @@ class _TarefasSalvasState extends State<TarefasSalvas> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add, size: 36),
         foregroundColor: Color(backgroudcolor),
-        backgroundColor: Color(corBorda),
+        backgroundColor: Color(corDetalhe),
         onPressed: () {
           _exibirCriarAnotacao();
         },
