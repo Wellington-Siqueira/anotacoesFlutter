@@ -1,4 +1,4 @@
-# relogio_e_anotacoes
+# anotacoes
 
 Primeiro projeto realizado em flutter.
 
