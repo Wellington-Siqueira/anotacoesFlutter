@@ -82,35 +82,37 @@ class _TarefasSalvasState extends State<TarefasSalvas> {
               "$textoSalvarAtualizar anotação",
               style: TextStyle(color: Color(secondaryColor)),
             ),
-            content: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                TextField(
-                  style: TextStyle(color: Color(secondaryColor)),
-                  controller: _titulocontroller,
-                  autofocus: true,
-                  decoration: InputDecoration(
-                      labelText: "Titulo",
-                      hintText: "Digite um titulo...",
-                      hintStyle: TextStyle(color: Color(secondaryColor)),
-                      labelStyle: TextStyle(
-                          color: Color(secondaryColor),
-                          fontWeight: FontWeight.w600)),
-                ),
-                TextField(
-                  style: TextStyle(color: Color(secondaryColor)),
-                  cursorColor: Color(secondaryColor),
-                  controller: _descricaocontroller,
-                  autofocus: true,
-                  decoration: InputDecoration(
-                      labelText: "Descrição",
-                      hintText: "Digite a anotação...",
-                      hintStyle: TextStyle(color: Color(secondaryColor)),
-                      labelStyle: TextStyle(
-                          color: Color(secondaryColor),
-                          fontWeight: FontWeight.w600)),
-                )
-              ],
+            content: SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  TextField(
+                    style: TextStyle(color: Color(secondaryColor)),
+                    controller: _titulocontroller,
+                    autofocus: true,
+                    decoration: InputDecoration(
+                        labelText: "Titulo",
+                        hintText: "Digite um titulo...",
+                        hintStyle: TextStyle(color: Color(secondaryColor)),
+                        labelStyle: TextStyle(
+                            color: Color(secondaryColor),
+                            fontWeight: FontWeight.w600)),
+                  ),
+                  TextField(
+                    style: TextStyle(color: Color(secondaryColor)),
+                    cursorColor: Color(secondaryColor),
+                    controller: _descricaocontroller,
+                    autofocus: true,
+                    decoration: InputDecoration(
+                        labelText: "Descrição",
+                        hintText: "Digite a anotação...",
+                        hintStyle: TextStyle(color: Color(secondaryColor)),
+                        labelStyle: TextStyle(
+                            color: Color(secondaryColor),
+                            fontWeight: FontWeight.w600)),
+                  )
+                ],
+              ),
             ),
             actions: [
               FlatButton(
