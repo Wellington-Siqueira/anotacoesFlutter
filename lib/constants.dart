@@ -1,2 +1,2 @@
-const backgroudcolor = 0xff191970;
-const corDetalhe = 0xff9EA39E;
+const primaryColor = 0xff000A61;
+const secondaryColor = 0xffDBAB00;

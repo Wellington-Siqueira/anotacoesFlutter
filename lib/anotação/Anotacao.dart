@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
@@ -75,33 +77,37 @@ class _TarefasSalvasState extends State<TarefasSalvas> {
         context: context,
         builder: (context) {
           return AlertDialog(
+            backgroundColor: Color(primaryColor),
             title: Text(
               "$textoSalvarAtualizar anotação",
-              style: TextStyle(color: Color(backgroudcolor)),
+              style: TextStyle(color: Color(secondaryColor)),
             ),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 TextField(
+                  style: TextStyle(color: Color(secondaryColor)),
                   controller: _titulocontroller,
                   autofocus: true,
                   decoration: InputDecoration(
                       labelText: "Titulo",
                       hintText: "Digite um titulo...",
-                      hintStyle: TextStyle(color: Color(backgroudcolor)),
+                      hintStyle: TextStyle(color: Color(secondaryColor)),
                       labelStyle: TextStyle(
-                          color: Color(backgroudcolor),
+                          color: Color(secondaryColor),
                           fontWeight: FontWeight.w600)),
                 ),
                 TextField(
+                  style: TextStyle(color: Color(secondaryColor)),
+                  cursorColor: Color(secondaryColor),
                   controller: _descricaocontroller,
                   autofocus: true,
                   decoration: InputDecoration(
                       labelText: "Descrição",
                       hintText: "Digite a anotação...",
-                      hintStyle: TextStyle(color: Color(corDetalhe)),
+                      hintStyle: TextStyle(color: Color(secondaryColor)),
                       labelStyle: TextStyle(
-                          color: Color(corDetalhe),
+                          color: Color(secondaryColor),
                           fontWeight: FontWeight.w600)),
                 )
               ],
@@ -111,7 +117,7 @@ class _TarefasSalvasState extends State<TarefasSalvas> {
                   onPressed: () => Navigator.pop(context),
                   child: Text(
                     "Cancelar",
-                    style: TextStyle(color: Color(backgroudcolor)),
+                    style: TextStyle(color: Color(secondaryColor)),
                   )),
               FlatButton(
                   onPressed: () {
@@ -119,7 +125,7 @@ class _TarefasSalvasState extends State<TarefasSalvas> {
                     Navigator.pop(context);
                   },
                   child: Text(textoSalvarAtualizar,
-                      style: TextStyle(color: Color(backgroudcolor))))
+                      style: TextStyle(color: Color(secondaryColor))))
             ],
           );
         });
@@ -144,7 +150,7 @@ class _TarefasSalvasState extends State<TarefasSalvas> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(backgroudcolor),
+      backgroundColor: Color(primaryColor),
       body: Column(
         children: [
           Container(
@@ -154,7 +160,7 @@ class _TarefasSalvasState extends State<TarefasSalvas> {
             child: Text(
               "ANOTAÇÕES",
               style: TextStyle(
-                  color: Color(corDetalhe),
+                  color: Color(secondaryColor),
                   fontSize: 20,
                   fontWeight: FontWeight.w900),
             ),
@@ -207,8 +213,8 @@ class _TarefasSalvasState extends State<TarefasSalvas> {
                             },
                             child: Padding(
                               padding: EdgeInsets.only(right: 16),
-                              child: Icon(Icons.edit,
-                                  color: Color(backgroudcolor)),
+                              child:
+                                  Icon(Icons.edit, color: Color(primaryColor)),
                             ),
                           ),
                         ],
@@ -222,8 +228,8 @@ class _TarefasSalvasState extends State<TarefasSalvas> {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add, size: 36),
-        foregroundColor: Color(backgroudcolor),
-        backgroundColor: Color(corDetalhe),
+        foregroundColor: Color(primaryColor),
+        backgroundColor: Color(secondaryColor),
         onPressed: () {
           _exibirCriarAnotacao();
         },
